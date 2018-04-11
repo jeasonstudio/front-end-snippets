@@ -1,0 +1,44 @@
+{
+    "name": "front-end-snippets",
+    "displayName": "front-end-snippets",
+    "description": "snippets for front-end developers",
+    "version": "0.0.1",
+    "publisher": "Jeason",
+    "scripts": {
+        "parse": "node ./cmd/parse.js"
+    },
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "shellscript",
+                "path": "./snippets/shellscript.json"
+            }
+        ]
+    }
+}

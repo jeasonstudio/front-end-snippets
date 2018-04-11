@@ -1,0 +1,227 @@
+{
+	"printToConsole": {
+		"prefix": "log",
+		"body": "console.log(${1})",
+		"description": "Log output to console"
+	},
+	"printToConsole2": {
+		"prefix": "clg",
+		"body": "console.log(${1})",
+		"description": "Log output to console"
+	},
+	"importFromModule": {
+		"prefix": "imp",
+		"body": "import ${2:moduleName} from '${1:module}'${0}",
+		"description": "Imports entire module statement in ES6 syntax"
+	},
+	"importFromDestructingModule": {
+		"prefix": "imd",
+		"body": "import { ${2} } from '${1:module}'${0}",
+		"description": "Imports only a portion of the module in ES6 syntax"
+	},
+	"importEverythingFromModule": {
+		"prefix": "ime",
+		"body": "import * as ${2:alias} from '${1:module}'${0}",
+		"description": "Imports everything as alias from the module in ES6 syntax"
+	},
+	"exportNamedFunction": {
+		"prefix": "enf",
+		"body": "export const ${1:functionName} = ${2:params} => {\n\t${0}\n}\n",
+		"description": "Export named function in ES6 syntax"
+	},
+	"exportDefaultFunction": {
+		"prefix": "edf",
+		"body": "export default ${1:params} => {\n\t${0}\n}\n",
+		"description": "Export default function in ES6 syntax"
+	},
+	"exportClassExtends": {
+		"prefix": "ecle",
+		"body": "export default class ${1:className} extends ${2:baseclassName} {\n\t${0}\n}\n",
+		"description": "Export default class which extends a base one in ES6 syntax"
+	},
+	"anonymousFunction": {
+		"prefix": "anfn",
+		"body": "${1:params} => {\n\t${2}\n}",
+		"description": "Creates an anonymous function in ES6 syntax"
+	},
+	"ConNamedFunction": {
+		"prefix": "confn",
+		"body": "const ${1:name} = ${2:params} => {\n\t${3}\n}",
+		"description": "Creates a named function in ES6 syntax"
+	},
+	"constAssignment": {
+		"prefix": "con",
+		"body": "const ${1:name} = ${2:value}",
+		"description": "Const assignment"
+	},
+	"letAssignment": {
+		"prefix": "let",
+		"body": "let ${1:name} = ${2:value}",
+		"description": "Let assignment"
+	},
+	"ifStatement": {
+		"prefix": "if",
+		"body": "if (${1}) { ${0} }",
+		"description": "If statement"
+	},
+	"elseStatement": {
+		"prefix": "else",
+		"body": "else { ${0} }",
+		"description": "Else statement"
+	},
+	"ifElseStatement": {
+		"prefix": "ife",
+		"body": "if (${1:condition}) {\n\t${0}\n} else {\n\t\n}",
+		"description": "If/else statement"
+	},
+	"elseIfStatement": {
+		"prefix": "elsei",
+		"body": "else if (${1}) { ${2} }",
+		"description": "Else if statement"
+	},
+	"ternaryOperator": {
+		"prefix": "ter",
+		"body": "${1:condition} ? ${2:expression} : ${3:expression}",
+		"description": "Ternary operator"
+	},
+	"forLoop": {
+		"prefix": "for",
+		"body": "for (let ${1:index} = 0; ${1:index} < ${2:length}; ${1:index} += 1) {\n\t${0}\n}",
+		"description": "For loop"
+	},
+	"forInLoop": {
+		"prefix": "forin",
+		"body": "for (let ${1:key} in ${2:array}) {\n\tif (${2:array}.hasOwnProperty(${1:key})) {\n\t\t${0}\n\t}\n}",
+		"description": "For in loop"
+	},
+	"es6ForOfLoop": {
+		"prefix": "forof",
+		"body": "for (let ${1:key} of ${2:array}) {\n\t${0}\n}",
+		"description": "For of loop (ES6)"
+	},
+	"whileLoop": {
+		"prefix": "while",
+		"body": "while (${1:condition}) {\n\t${0}\n}",
+		"description": "While loop"
+	},
+	"tryCatch": {
+		"prefix": "tryc",
+		"body": "try {\n\t${1}\n} catch (err) {\n\t${0}\n}",
+		"description": "Try/catch"
+	},
+	"switchCase": {
+		"prefix": "switch",
+		"body": "switch (${1:expr}) {\n\tcase ${2:value}:\n\t\treturn ${0}\n\tdefault:\n\t\treturn\n}",
+		"description": "Switch case"
+	},
+	"namedFunction": {
+		"prefix": "func",
+		"body": "function ${1:name} (${2:arguments}) {\n\t${0}\n}",
+		"description": "Named function"
+	},
+	"iife": {
+		"prefix": "iife",
+		"body": "((${1:arguments}) => {\n\t${0}\n})(${2})",
+		"description": "Immediately-invoked function expression (IIFE)"
+	},
+	"simpleArrowFunction": {
+		"prefix": "fu",
+		"body": "(${1:arguments}) => ${2:statement}",
+		"description": "Simple arrow function (ES6)"
+	},
+	"generatorFunction": {
+		"prefix": "function*",
+		"body": "function* ${1:name}(${2:arguments}) {\n\t${0}\n}",
+		"description": "Generator function (ES6)"
+	},
+	"forEachLoop": {
+		"prefix": "foreach",
+		"body": "forEach(${1:item} => ${0})",
+		"description": "ForEach loop"
+	},
+	"map": {
+		"prefix": "map",
+		"body": "map(${1:item} => ${0})",
+		"description": "Map array"
+	},
+	"reduce": {
+		"prefix": "reduce",
+		"body": "reduce((${1:previous}, ${2:current}) => {\n\t${0}\n}${3:, initial})",
+		"description": "Reduce array"
+	},
+	"filter": {
+		"prefix": "filter",
+		"body": "filter(${1:item} => {\n\t${0}\n})",
+		"description": "Filter array"
+	},
+	"classConstructor": {
+		"prefix": "constr",
+		"body": "constructor(${1:arguments}) {\n\tsuper(${1:arguments})${0}\n}",
+		"description": "Class constructor (ES6)"
+	},
+	"return": {
+		"prefix": "ret",
+		"body": "return ${0}",
+		"description": "Return"
+	},
+	"returnPromise": {
+		"prefix": "returnP",
+		"body": "return new Promise((resolve, reject) => {\n\t${0}\n})",
+		"description": "Return Promise (ES6)"
+	},
+	"require": {
+		"prefix": "re",
+		"body": "require('${1:module}')",
+		"description": "Require"
+	},
+	"requireAssignment": {
+		"prefix": "conreq",
+		"body": "const ${1:name} = require('${2:module}')",
+		"description": "Require assignment"
+	},
+	"exportsMember": {
+		"prefix": "exports",
+		"body": "exports.${1:member} = ${2:value}",
+		"description": "exports.member"
+	},
+	"moduleExports": {
+		"prefix": "module",
+		"body": "module.exports = ${1:name}",
+		"description": "module.exports"
+	},
+	"describe": {
+		"prefix": "describe",
+		"body": "describe('${1:description}', () => {\n\t${0}\n})",
+		"description": "BDD describe"
+	},
+	"it": {
+		"prefix": "it",
+		"body": "it('${1:description}', () => {\n\t${0}\n})",
+		"description": "TDD it"
+	},
+	"setTimeout": {
+		"prefix": "setTimeout",
+		"body": "setTimeout(() => {\n\t${0}\n}, ${1:delay})",
+		"description": "SetTimeout"
+	},
+	"setInterval": {
+		"prefix": "setInterval",
+		"body": "setInterval(() => {\n\t${0}\n}, ${1:delay})",
+		"description": "SetInterval"
+	},
+	"setImmediate": {
+		"prefix": "setImmediate",
+		"body": "setImmediate(() => {\n\t${0}\n})",
+		"description": "SetImmediate"
+	},
+	"processNextTick": {
+		"prefix": "pnt",
+		"body": "process.nextTick(() => {\n\t${0}\n})",
+		"description": "Process nextTick"
+	},
+	"useStrict": {
+		"prefix": "us",
+		"body": "'use strict'",
+		"description": "Insert 'use strict' statement"
+	}
+}
