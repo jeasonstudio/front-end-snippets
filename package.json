@@ -2,7 +2,7 @@
 	"name": "front-end-snippets",
 	"displayName": "front-end-snippets",
 	"description": "snippets for front-end developers",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"publisher": "Jeason",
 	"scripts": {
 		"parse": "node ./cmd/parse.js"
